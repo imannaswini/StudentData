@@ -1,38 +1,169 @@
-.App {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #5f4692;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-add {
+  background-color: #3e205c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+thead {
+  background-color: #703f9d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+th, td {
+  padding: 12px 16px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tbody tr:nth-child(even) {
+  background-color: #f9f1fc;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2d9ef;
+}
+
+/* === ACTION BUTTONS FLEX CONTAINER === */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* === BUTTON BASE STYLE === */
+.action-buttons .btn {
+  min-width: 80px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* === INDIVIDUAL BUTTON COLORS === */
+.view-btn {
+  background-color: #3ba9f0;
+}
+
+.view-btn:hover {
+  background-color: #1e8edb;
+  transform: translateY(-2px);
+}
+
+.edit-btn {
+  background-color: #5e2c90;
+}
+
+.edit-btn:hover {
+  background-color: #4b2371;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #f54c4c;
+}
+
+.delete-btn:hover {
+  background-color: #d63b3b;
+  transform: translateY(-2px);
+}
+
+form.form-style {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form.form-style input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form.form-style input:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+form.form-style button,
+.btn-primary {
+  background-color: #5f4692;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.form-style button:hover,
+.btn-primary:hover {
+  background-color: #4e387b;
+}
+
+.details-box {
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f5fb;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.details-box p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.details-box strong {
+  color: #5e2c90;
 }

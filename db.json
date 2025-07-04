@@ -1,0 +1,13 @@
+{
+  "students": [
+    {
+      "id": "f5b7",
+      "name": "Alice Smith",
+      "place": "Bangalore",
+      "phone": "1234567789",
+      "college": "Reva University",
+      "degree": "btech",
+      "course": "ece"
+    }
+  ]
+}
